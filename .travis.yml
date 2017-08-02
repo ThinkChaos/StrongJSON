@@ -1,0 +1,30 @@
+language: objective-c
+osx_image: xcode8.3
+
+branches:
+  except:
+  - gh-pages
+
+install:
+  - brew remove --force swiftlint || true
+  - brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/master/Formula/swiftlint.rb
+  - gem install jazzy
+
+script:
+  - swiftlint --strict
+  - xcrun swift build
+  - xcrun swift test
+  - xcrun swift test -c release
+  - jazzy
+
+before_deploy:
+  - ls -A | grep -vEe '(.git|docs)' | xargs rm -rf
+  - mv docs/* .
+  - rmdir docs
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: master

@@ -1,0 +1,31 @@
+disabled_rules:
+  - line_length
+  - vertical_whitespace
+
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - file_header
+  - implicit_return
+  - implicitly_unwrapped_optional
+  - let_var_whitespace
+  - multiline_parameters
+  - operator_usage_whitespace
+  - sorted_imports
+  - unneeded_parentheses_in_closure_argument
+  - vertical_parameter_alignment_on_call
+
+file_header:
+  forbidden_pattern: .
+
+identifier_name:
+  excluded:
+    - A_ROOM
+    - ID
+    - ok
+    - up
+    - ws
+
+trailing_comma:
+  mandatory_comma: true

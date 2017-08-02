@@ -1,0 +1,5 @@
+/.build
+/build
+/DerivedData
+/docs
+/*.xcodeproj/**/xcuserdata/

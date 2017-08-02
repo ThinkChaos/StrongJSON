@@ -1,0 +1,7 @@
+author: ThinkChaos
+author_url: https://github.com/ThinkChaos
+github_url: https://github.com/ThinkChaos/StrongJSON
+github_file_prefix: https://github.com/ThinkChaos/StrongJSON/tree/master
+module: StrongJSON
+root_url: https://thinkchaos.github.com/StrongJSON
+skip_undocumented: false
