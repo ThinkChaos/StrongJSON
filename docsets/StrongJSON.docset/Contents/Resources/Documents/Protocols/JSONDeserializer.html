@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JSONDeserializer Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/JSONDeserializer" class="dashAnchor"></a>
+    <a title="JSONDeserializer Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">StrongJSON Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/ThinkChaos/StrongJSON"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fthinkchaos%2Egithub%2Ecom%2Fdocsets%2FStrongJSON%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">StrongJSON Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        JSONDeserializer Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DiscardJSON.html">DiscardJSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/JSONArray.html">JSONArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/JSONDictionary.html">JSONDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/JSONNull.html">JSONNull</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/JSONNullable.html">JSONNullable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/JSONObject.html">JSONObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/JSONOptional.html">JSONOptional</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v10StrongJSON11errorDomainSS">errorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/JSONError.html">JSONError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/JSONErrorCode.html">JSONErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/JSONParsedObject.html">JSONParsedObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float32.html">Float32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float64.html">Float64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int16.html">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int32.html">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int8.html">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt.html">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt16.html">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt32.html">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt64.html">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P10StrongJSON19JSONAnyParsedObject">JSONAnyParsedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/JSONDeserializer.html">JSONDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/JSONRawRepresentable.html">JSONRawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/JSONRepresentable.html">JSONRepresentable</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>JSONDeserializer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">JSONDeserializer</span></code></pre>
+
+                </div>
+              </div>
+            <p>A protocol for types that can deserialize JSON.</p>
+
+<p>All methods have default implementations. See <code>JSONDeserializer</code>&lsquo;s extensions for details.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P10StrongJSON16JSONDeserializer12Deserialized"></a>
+                    <a name="//apple_ref/swift/Alias/Deserialized" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The output type for this deserializer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">associatedtype</span> <span class="kt">Deserialized</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer.swift#L12">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT10jsonObjectOS_16JSONParsedObject_wx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(jsonObject:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT10jsonObjectOS_16JSONParsedObject_wx12Deserialized">deserialize(jsonObject:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes <code>jsonObject</code> into a value of type <code><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></code>.</p>
+
+<p>This method is provided so overriding all deserialization doesn&rsquo;t
+ require overriding all the different <code>deserialize</code> methods.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Calls the <code>deserialized</code> method corresponding to <code>jsonObject</code>&lsquo;s variant.</p>
+
+<p>Override this method if your deserializer doesn&rsquo;t depend on the <code>jsonObject</code>&rsquo;s type.
+ Otherwise, you probably want to override the specialized <code>deserialize</code> method(s).</p>
+
+<p>For an example of the first, see <code>JSONObject</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">jsonObject</span><span class="p">:</span> <span class="kt"><a href="../Enums/JSONParsedObject.html">JSONParsedObject</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer.swift#L20">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT5arrayCSo7NSArray_wx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(array:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT5arrayCSo7NSArray_wx12Deserialized">deserialize(array:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes <code>array</code> into a value of type <code><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code>JSONError.unexpectedType</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">NSArray</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer.swift#L23">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT10dictionaryCSo12NSDictionary_wx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(dictionary:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT10dictionaryCSo12NSDictionary_wx12Deserialized">deserialize(dictionary:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes <code>dictionary</code> into a value of type <code><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code>JSONError.unexpectedType</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">dictionary</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer.swift#L26">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT4nullCSo6NSNull_wx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(null:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT4nullCSo6NSNull_wx12Deserialized">deserialize(null:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes <code>null</code> into a value of type <code><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code>JSONError.unexpectedType</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">null</span><span class="p">:</span> <span class="kt">NSNull</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer.swift#L29">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT6numberCSo8NSNumber_wx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(number:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT6numberCSo8NSNumber_wx12Deserialized">deserialize(number:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes <code>number</code> into a value of type <code><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code>JSONError.unexpectedType</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">number</span><span class="p">:</span> <span class="kt">NSNumber</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer.swift#L32">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT6stringCSo8NSString_wx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(string:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT6stringCSo8NSString_wx12Deserialized">deserialize(string:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes <code>string</code> into a value of type <code><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code>JSONError.unexpectedType</code>.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">NSString</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer.swift#L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE10StrongJSONPS_16JSONDeserializer9parseJSONFzV10Foundation4Datawx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/parseJSON(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE10StrongJSONPS_16JSONDeserializer9parseJSONFzV10Foundation4Datawx12Deserialized">parseJSON(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parse <code>data</code> using <code>JSONSerialization.jsonObject(with:options:)</code> and then calls
+ <code><a href="../Protocols/JSONDeserializer.html#/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzP_wx12Deserialized">deserialize(_:)</a></code> on the resulting object.</p>
+
+<p><code>JSONSerialization.jsonObject(with:options:)</code> is called with the <code>allowFragments</code> option.
+ This should never be a problem thanks to the type checking that occurs, and
+ should you need it, you have it.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/JSONError.html#/s:FO10StrongJSON9JSONError11invalidJSONFMS0_FT15underlyingErrorCSo7NSError_S0_">JSONError.invalidJSON</a></code> when <code>JSONSerialization.jsonObject(with:options:)</code> fails.
+       Lets <code><a href="../Protocols/JSONDeserializer.html#/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzP_wx12Deserialized">deserialize(_:)</a></code>&lsquo;s errors go through.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">parseJSON</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer+Util.swift#L18-L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE10StrongJSONPS_16JSONDeserializer9parseJSONFzSSwx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/parseJSON(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE10StrongJSONPS_16JSONDeserializer9parseJSONFzSSwx12Deserialized">parseJSON(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes the string as UTF-8 and calls <code>parseJSON</code> with that data.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/JSONError.html#/s:FO10StrongJSON9JSONError11invalidJSONFMS0_FT15underlyingErrorCSo7NSError_S0_">JSONError.invalidJSON</a></code> when <code>JSONSerialization.jsonObject(with:options:)</code> fails.
+       Lets <code><a href="../Protocols/JSONDeserializer.html#/s:ZFE10StrongJSONPS_16JSONDeserializer9parseJSONFzV10Foundation4Datawx12Deserialized">parseJSON(_:)</a></code>&lsquo;s errors go through.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">parseJSON</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer+Util.swift#L36-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzP_wx12Deserialized"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzP_wx12Deserialized">deserialize(_:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks <code>object</code> is a type returned by <code>JSONSerialization.jsonObject(with:options:)</code>,
+ and calls <code><a href="../Protocols/JSONDeserializer.html#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT10jsonObjectOS_16JSONParsedObject_wx12Deserialized">deserialize(jsonObject:)</a></code>.</p>
+
+<p>The object casted and wrapped in <code><a href="../Enums/JSONParsedObject.html">JSONParsedObject</a></code>, this prevents from polluting
+ the interface with <code>Any</code>.</p>
+
+<p>If you&rsquo;re thinking about replacing this method, you should replace
+ <code><a href="../Protocols/JSONDeserializer.html#/s:ZFP10StrongJSON16JSONDeserializer11deserializeFzT10jsonObjectOS_16JSONParsedObject_wx12Deserialized">deserialize(jsonObject:)</a></code> instead:</p>
+
+<ul>
+<li>as with this method, all deserialization goes through it</li>
+<li>you keep this method&rsquo;s sanity checks</li>
+<li>you get extra information about the object (if you want the raw object, use <code><a href="../Enums/JSONParsedObject.html#/s:vO10StrongJSON16JSONParsedObject5innerPS_19JSONAnyParsedObject_">JSONParsedObject.inner</a></code>)</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer+Util.swift#L58-L82">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzT3keySS2ofCSo12NSDictionary9orDefaultGSqwx12Deserialized__wxS2_"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(key:of:orDefault:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzT3keySS2ofCSo12NSDictionary9orDefaultGSqwx12Deserialized__wxS2_">deserialize(key:of:orDefault:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience function to deserialize a key from a dictionary.</p>
+
+<p>Using this function has the advantage of producing a nicer error when the key is missing.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/JSONError.html#/s:FO10StrongJSON9JSONError12missingValueFMS0_FT4nameSS_S0_">JSONError.missingValue</a></code> if the requested key was not found and no default was provided.
+        Also lets <code>T.deserialize</code>&lsquo;s errors go through.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                            <span class="n">of</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">,</span>
+                            <span class="n">orDefault</span> <span class="nv">def</span><span class="p">:</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer+Util.swift#L92-L104">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzT5keyAtGSaSS_2ofCSo12NSDictionary9orDefaultGSqwx12Deserialized__wxS2_"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(keyAt:of:orDefault:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFE10StrongJSONPS_16JSONDeserializer11deserializeFzT5keyAtGSaSS_2ofCSo12NSDictionary9orDefaultGSqwx12Deserialized__wxS2_">deserialize(keyAt:of:orDefault:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience function to deserialize a key from a nested dictionary.</p>
+
+<p>Using this function has the advantage of producing a nicer error when the key is missing.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/JSONError.html#/s:FO10StrongJSON9JSONError12missingValueFMS0_FT4nameSS_S0_">JSONError.missingValue</a></code> if the requested key was not found and no default was provided.
+        Also lets <code>T.deserialize</code>&lsquo;s errors go through.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="n">keyAt</span> <span class="nv">path</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">],</span>
+                            <span class="n">of</span> <span class="nv">dictionary</span><span class="p">:</span> <span class="kt">NSDictionary</span><span class="p">,</span>
+                            <span class="n">orDefault</span> <span class="nv">def</span><span class="p">:</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/JSONDeserializer.html#/s:P10StrongJSON16JSONDeserializer12Deserialized">Deserialized</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/ThinkChaos/StrongJSON/tree/master/Sources/StrongJSON/JSONDeserializer+Util.swift#L114-L147">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/ThinkChaos" target="_blank" rel="external">ThinkChaos</a>. All rights reserved. (Last updated: 2017-08-02)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
