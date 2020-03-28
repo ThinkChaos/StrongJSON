@@ -54,7 +54,7 @@ public enum JSONError: Error {
      * - Returns: An `NSError` corresponding to `self`.
      */
     public func toNSError() -> NSError {
-        var userInfo = [AnyHashable: Any]()
+        var userInfo = [String: Any]()
 
         userInfo[NSLocalizedDescriptionKey] = "\(self)"
 

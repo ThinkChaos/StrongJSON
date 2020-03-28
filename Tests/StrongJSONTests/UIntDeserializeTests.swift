@@ -68,8 +68,8 @@ class UIntDeserializeTests: XCTestCase {
 #if arch(arm) || arch(i386)
         XCTAssertThrowsError(try UInt.parse("\(UInt32.max.toUIntMax() + 1)"))
 #endif
-        XCTAssertThrowsError(try UInt8.parse("\(UInt8.max.toUIntMax() + 1)"))
-        XCTAssertThrowsError(try UInt16.parse("\(UInt16.max.toUIntMax() + 1)"))
-        XCTAssertThrowsError(try UInt32.parse("\(UInt32.max.toUIntMax() + 1)"))
+        XCTAssertThrowsError(try UInt8.parse("\(UIntMax(UInt8.max) + 1)"))
+        XCTAssertThrowsError(try UInt16.parse("\(UIntMax(UInt16.max) + 1)"))
+        XCTAssertThrowsError(try UInt32.parse("\(UIntMax(UInt32.max) + 1)"))
     }
 }

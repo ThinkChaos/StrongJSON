@@ -3,6 +3,7 @@ import Foundation
 
 /**
  * Protocol to auto-implement deserialization for `RawRepresentable` types.
+ * Those can't use JSONDeserializer: RawValue does not implement JSONAnyParsedObject.
  *
  * **Example:**
  *
@@ -16,13 +17,9 @@ import Foundation
  * }
  * ```
  */
-public protocol JSONRawRepresentable: JSONDeserializer, RawRepresentable {}
+public protocol JSONRawRepresentable: JSONDeserializer, RawRepresentable where Deserialized == Self {}
 
 public extension JSONRawRepresentable {
-
-    // Can't use JSONDeserializer: RawValue does not implement JSONAnyParsedObject
-    typealias Deserialized = Self
-
     /**
      * Casts the `jsonObject` to `RawValue` and calls `init(rawValue:)`.
      *

@@ -55,7 +55,7 @@ public extension JSONDeserializer {
      *  - you keep this method's sanity checks
      *  - you get extra information about the object (if you want the raw object, use `JSONParsedObject.inner`)
      */
-    static final func deserialize(_ object: Any) throws -> Deserialized {
+    static func deserialize(_ object: Any) throws -> Deserialized {
         assert(!(object is Data),
                "You called `\(Self.self).deserialize()` with a Data instance. " +
                "Did you mean to call `\(Self.self).parseJSON`?"

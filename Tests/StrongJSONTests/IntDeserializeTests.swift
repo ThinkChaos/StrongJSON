@@ -64,17 +64,17 @@ class IntDeserializeTests: XCTestCase {
 #if arch(arm) || arch(i386)
         XCTAssertThrowsError(try Int.parse("\(UInt.max.toIntMax() + 1)"))
 #endif
-        XCTAssertThrowsError(try Int8.parse("\(Int8.max.toIntMax() + 1)"))
-        XCTAssertThrowsError(try Int16.parse("\(Int16.max.toIntMax() + 1)"))
-        XCTAssertThrowsError(try Int32.parse("\(Int32.max.toIntMax() + 1)"))
+        XCTAssertThrowsError(try Int8.parse("\(IntMax(Int8.max) + 1)"))
+        XCTAssertThrowsError(try Int16.parse("\(IntMax(Int16.max) + 1)"))
+        XCTAssertThrowsError(try Int32.parse("\(IntMax(Int32.max) + 1)"))
     }
 
     func testSmallerThanMinValue() {
 #if arch(arm) || arch(i386)
         XCTAssertThrowsError(try Int.parse("\(Int.min.toIntMax() - 1)"))
 #endif
-        XCTAssertThrowsError(try Int8.parse("\(Int8.min.toIntMax() - 1)"))
-        XCTAssertThrowsError(try Int16.parse("\(Int16.min.toIntMax() - 1)"))
-        XCTAssertThrowsError(try Int32.parse("\(Int32.min.toIntMax() - 1)"))
+        XCTAssertThrowsError(try Int8.parse("\(IntMax(Int8.min) - 1)"))
+        XCTAssertThrowsError(try Int16.parse("\(IntMax(Int16.min) - 1)"))
+        XCTAssertThrowsError(try Int32.parse("\(IntMax(Int32.min) - 1)"))
     }
 }

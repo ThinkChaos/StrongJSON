@@ -12,8 +12,7 @@ import Foundation
  *
  * For an example, see [UsageTests.swift](https://github.com/ThinkChaos/StrongJSON/blob/master/Tests/StrongJSONTests/UsageTests.swift).
  */
-public protocol JSONRepresentable: JSONDeserializer {
-
+public protocol JSONRepresentable: JSONDeserializer where Deserialized == Self {
     /**
      * The type that represents `Self`, as returned by `JSONSerialization.jsonObject(with:options:)`.
      *
@@ -21,15 +20,11 @@ public protocol JSONRepresentable: JSONDeserializer {
      */
     associatedtype JSONRepresentation: JSONAnyParsedObject = NSDictionary
 
-     /// Deserialises `jsonData` into an instance of `Self`.
+    /// Deserialises `jsonData` into an instance of `Self`.
     init(jsonData: JSONRepresentation) throws
 }
 
 public extension JSONRepresentable {
-
-    /// A JSONRepresentable always deserializes itself.
-    typealias Deserialized = Self
-
     /**
      * Tries casting the `JSONParsedObject` to `JSONRepresentation`, and calls `init(jsonData:)`.
      *

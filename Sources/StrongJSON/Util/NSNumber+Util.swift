@@ -7,6 +7,9 @@ import Foundation
 //  - 0 is stored as an Int64
 //  - All other numbers (including 0.0) are stored as Doubles
 
+public typealias IntMax = Int64
+public typealias UIntMax = UInt64
+
 extension NSNumber {
 
     fileprivate func isBool() -> Bool {
@@ -61,15 +64,15 @@ extension NSNumber {
     func checkedCast<T: SignedInteger>(to value: T, typeMinValue: T, typeMaxValue: T) throws -> T {
         return try checkedCast(to: value,
                                withAllBits: self.int64Value as IntMax,
-                               min: typeMinValue.toIntMax(),
-                               max: typeMaxValue.toIntMax())
+                               min: IntMax(typeMaxValue),
+                               max: IntMax(typeMaxValue))
     }
 
     func checkedCast<T: UnsignedInteger>(to value: T, typeMaxValue: T) throws -> T {
         _ = try checkedCast(to: value,
                             withAllBits: self.uint64Value as UIntMax,
                             min: UIntMax(0),
-                            max: typeMaxValue.toUIntMax())
+                            max: UIntMax(typeMaxValue))
 
         if self.isUInt() {
             return value
@@ -83,7 +86,7 @@ extension NSNumber {
      *
      * - Throws: `JSONError.unexpectedType` when the value appears to be invalid.
      */
-    fileprivate func checkedCast<T, M: Integer>(to value: T, withAllBits: M, min: M, max: M) throws -> T {
+    fileprivate func checkedCast<T, M: FixedWidthInteger>(to value: T, withAllBits: M, min: M, max: M) throws -> T {
         if self.isBool() {
             throw JSONError.unexpectedType(type: "Bool", whenDeserializing: "\(T.self)")
         }
