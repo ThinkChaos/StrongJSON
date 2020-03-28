@@ -4,7 +4,8 @@ import Foundation
 /**
  * Protocol to auto-implement deserialization for `RawRepresentable` types.
  *
- * **Example:**  
+ * **Example:**
+ *
  * The following enum automatically implements `JSONDeserializer`.
  *
  * ```swift
@@ -31,7 +32,7 @@ public extension JSONRawRepresentable {
      */
     static func deserialize(jsonObject: JSONParsedObject) throws -> Self {
         guard let rawValue = jsonObject.inner as? RawValue else {
-            throw JSONError.unexpectedType(type: "\(jsonObject.typeName)", whenDeserializing: "\(Self.self)")
+            throw JSONError.unexpectedType(type: jsonObject.typeName, whenDeserializing: "\(Self.self)")
         }
 
         guard let result = Self.init(rawValue: rawValue) else {

@@ -136,7 +136,7 @@ public extension JSONDeserializer {
             let jsonObject = try JSONParsedObject.deserialize(nested)
 
             guard case let .dictionary(next) = jsonObject else {
-                throw JSONError.unexpectedType(type: "\(jsonObject.typeName)", whenDeserializing: "keyAt '\(currPath)' as NSDictionary")
+                throw JSONError.unexpectedType(type: jsonObject.typeName, whenDeserializing: "keyAt '\(currPath)' as NSDictionary")
             }
 
             currPath += "."

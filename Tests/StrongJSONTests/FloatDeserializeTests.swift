@@ -14,7 +14,6 @@ extension FloatingPoint {
 
         let precision = self.exponent >= 0 ? 0 : -self.exponent
 
-        // swiftlint:disable:next force_cast
         return String(format: "%.\(precision)f", fmtArg)
     }
 }

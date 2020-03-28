@@ -9,7 +9,7 @@ import Foundation
  *
  *  - specify the `JSONRepresentation` type
  *  - implement `init(jsonData:)`
- * 
+ *
  * For an example, see [UsageTests.swift](https://github.com/ThinkChaos/StrongJSON/blob/master/Tests/StrongJSONTests/UsageTests.swift).
  */
 public protocol JSONRepresentable: JSONDeserializer {
@@ -38,7 +38,7 @@ public extension JSONRepresentable {
      */
     static func deserialize(jsonObject: JSONParsedObject) throws -> Self {
         guard let jsonData = jsonObject.inner as? JSONRepresentation else {
-            throw JSONError.unexpectedType(type: "\(jsonObject.typeName)", whenDeserializing: "\(Self.self)")
+            throw JSONError.unexpectedType(type: jsonObject.typeName, whenDeserializing: "\(Self.self)")
         }
 
         return try Self.init(jsonData: jsonData)

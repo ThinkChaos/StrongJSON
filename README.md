@@ -68,7 +68,7 @@ Format: `Deserializer[: OutputType]`, where `OutputType` defaults to `Deserializ
 
  - [`DiscardJSON`][DiscardJSON]: `Void`
  - [`JSONRawRepresentable`][RawRepresentable]: a protocol to auto-implement `JSONDeserializable` for your enums with raw values
- - [`JSONRepresentable`][Representable]: a protocol to reduce self-deserializing types' boiler-plate to a `typealias` and an initialiser
+ - [`JSONRepresentable`][Representable]: a protocol to reduce boiler-plate for self-deserializing types to a `typealias` and an initialiser
 
 
 [UsageTests.swift]: https://github.com/ThinkChaos/StrongJSON/blob/master/Tests/StrongJSONTests/UsageTests.swift

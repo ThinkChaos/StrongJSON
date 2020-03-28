@@ -29,3 +29,6 @@ identifier_name:
 
 trailing_comma:
   mandatory_comma: true
+
+trailing_whitespace:
+  severity: error
